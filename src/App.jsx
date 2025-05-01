@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const url = "http://localhost:5000/copy";
+        const url = "https://copy-paste-backend-tkaf.onrender.com/copy";
         const response = await axios.get(url);
         setText(response?.data?.text?.txt);
         console.log("Text" + text);
@@ -33,7 +33,7 @@ function App() {
       const body = {
         text: text,
       };
-      const url = "http://localhost:5000/paste";
+      const url = "https://copy-paste-backend-tkaf.onrender.com/paste";
       const response = await axios.post(url, body);
       console.log(response);
       setRes(response?.data?.message);
